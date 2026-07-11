@@ -6,129 +6,181 @@
     <title>CSS</title>
     <style>
         *{
-            background-color: black;
-            color: whitesmoke;
+            background-color: #fdfdfb;
+            color: #111;
+            font-family: 'IBM Plex Sans', monospace;
+            font-size: 14px;
+            line-height: 1.5;
+        }
+
+        footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 26px 24px ;
+            border-top: 1px solid #111;
+        }
+
+        h1{
+            font-family:'Source Serif 4', serif;
+            font-weight:700;
+            font-size:38px;
+            margin:0 0 8px;
+        }
+        .description {
+            font-size: 13px;
+            color: #6b6b6b;
+        }
+        .description a {
+            text-decoration: none;
+            color:#8a1f11;
+        }
+        body{ 
+            max-width:960px;
+            margin:0 auto;
+            padding:36px 24px 80px;
+        }
+
+        table {
+            width:100%;
+        }
+        thead th {
+            text-align:left;
+            font-size:12px;
+            text-transform:uppercase;
+            color:#6b6b6b;
+            font-weight:600;
+            padding:8px 10px;
+            background-color:#fdfdfb;
+        }
+        tbody td{
+            padding:11px 10px;
+            border-bottom:1px solid #dddad2;
+        }
+        .no {
+            width: 40px;
+            color: #6b6b6b;
+        }
+        .name{
+            font-weight:600;
+            font-size:16px;
+        }
+        .topic{
+            font-weight:400;
+            color:#6b6b6b;
+            font-size:12px;
+            margin-top:2px;
+        }
+        .type{
+            width:110px;
+        }
+        .tag{
+            font-size:12px;
+            letter-spacing:.04em;
+            text-transform:uppercase;
+            padding:2px 5px;
+            border:1px solid #111;
+        }
+        .battle{
+            color:#8a1f11;
+            border-color:#8a1f11;
+        }
+        .classs{
+            color:#3d8a11;
+            border-color:#3d8a11;
+        }
+        .links{
+            width:185px;
+        }
+        .links a{
+            text-decoration:underline;
+            margin-right:12px;
+            font-size:12px;
+        }
+        td.links .off{
+            color:#c9c6bd;
         }
     </style>
 
 </head>
 <body>
-    <h1 style="text-align: center;">CSS Practice Journey</h1>
-
-    <p style=" font-size: 18px; width: 80%; margin-left: 150px; margin-bottom: 0px; ">
-        This page contains my daily CSS practice exercises. Along with our classroom learning,I am solving CSS challenges regularly to improve my understanding of layouts,positioning, flexbox, animations, and creative designs. I will continue updatingthis page with every new practice task to track my progress and strengthen my CSS skills.
+    <h1>Every box I've built.</h1>
+    <p class="description">
+    A running record of my CSS practice — daily class exercises and
+    <a href="https://cssbattle.dev/">CSS Battle</a>
+    challenges, logged as I go. Full code on
+    <a href="https://github.com/koushikreddy-p/CSS-Practice">GitHub</a>.
     </p>
-
     <br>
-    <table border="3" width="75%" height="50" align="center">
-
-        <tr bgcolor="#d9d9d9" height="50">
-            <th>S.No</th>
-            <th>Challenge Name</th>
-            <th>Reference</th>
-            <th>My Solution</th>
-            <th>GitHub</th>
-        </tr>
-
-        <tr height="50">
-            <td align="center">
-                <font size="3">1</font>
-            </td>
-            <td align="Start">
-                <font size="3">Twin Pillar Bridge</font>
-            </td>
-            <td align="center">
-                <a href="https://cssbattle.dev/play/h3l8ESz0rxoqQDKXESq7">Reference</a>
-            </td>
-            <td align="center">
-                <a href="./pratice1.html">click here</a>
-            </td>
-            <td align="center">
-                <a href="https://github.com/koushikreddy-p/CSS-Practice/blob/main/pratice1.html">My github link</a>
-            </td>
-        </tr>
-
-        <tr height="50">
-            <td align="center">
-                <font size="3">2</font>
-            </td>
-            <td align="Start">
-                <font size="3">HDFC Logo</font>
-            </td>
-            <td align="center">
-                <a href="https://cssbattle.dev/play/YJ5FEvmSn4jjeldoB66K">Reference</a>
-            </td>
-            <td align="center">
-                <a href="./hdfc.html">click here</a>
-            </td>
-            <td align="center">
-                <a href="https://github.com/koushikreddy-p/CSS-Practice/blob/main/hdfc.html">My github link</a>
-            </td>
-        </tr>
-
-        <tr height="50">
-            <td align="center">
-                <font size="3">3</font>
-            </td>
-            <td align="Start">
-                <font size="3">Monster Symbol</font>
-            </td>
-            <td align="center">
-                <a href="https://cssbattle.dev/play/bzQ591FAfiRjAtqMae1E">Reference</a>
-            </td>
-            <td align="center">
-                <a href="./pratice3.html">click here</a>
-            </td>
-            <td align="center">
-                <a href="https://github.com/koushikreddy-p/CSS-Practice/blob/main/pratice3.html">My github link</a>
-            </td>
-        </tr>
-
-        <tr height="50">
-            <td align="center">
-                <font size="3">4</font>
-            </td>
-            <td align="Start">
-                <font size="3">Circular Ring Design</font>
-            </td>
-            <td align="center">
-                <a href="https://cssbattle.dev/play/roAyjEeXtmG1qITOSiXY">Reference</a>
-            </td>
-            <td align="center">
-                <a href="./pratice2.html">click here</a>
-            </td>
-            <td align="center">
-                <a href="https://github.com/koushikreddy-p/CSS-Practice/blob/main/pratice2.html">My github link</a>
-            </td>
-        </tr>
-
-        <tr height="50">
-            <td align="center">
-                <font size="3">5</font>
-            </td>
-            <td align="Start">
-                <font size="3">Item Card</font>
-            </td>
-            <td align="center">
-                <a href="./images/product card.png">Reference</a>
-            </td>
-            <td align="center">
-                <a href="./card1.html">click here</a>
-            </td>
-            <td align="center">
-                <a href="https://github.com/koushikreddy-p/CSS-Practice/blob/main/card1.html">My github link</a>
-            </td>
-        </tr>
 
 
+    <table>
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>TASK NAME</th>
+                <th>TYPE</th>
+                <th>LINKS</th>
+            </tr>
+        </thead>
 
+        <tbody>
+            <tr>
+                <td class="no">01</td>
+                <td class="name">Twin Pillar Bridge <span class="topic">Border-radius,Transforms,Grouped selectors (#base1, #base2 — styling multiple IDs)</span></td>
+                <td class="type"><span class="tag battle">CSS Battle</span></td>
+                <td class="links"><a href="https://cssbattle.dev/play/h3l8ESz0rxoqQDKXESq7">Target</a>
+                    <a href="./pratice1.html">Solution</a>
+                    <a href="https://github.com/koushikreddy-p/CSS-Practice/blob/main/pratice1.html">Code</a>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="no">02</td>
+                <td class="name">HDFC Logo <span class="topic">Box model & sizing (width, height),Transforms (translateX/translateY),Color layering</span></td>
+                <td class="type"><span class="tag battle">CSS Battle</span></td>
+                <td class="links"><a href="https://cssbattle.dev/play/YJ5FEvmSn4jjeldoB66K">Target</a>
+                    <a href="./hdfc.html">Solution</a>
+                    <a href="https://github.com/koushikreddy-p/CSS-Practice/blob/main/hdfc.html">Code</a>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="no">03</td>
+                <td class="name">Monster Symbol <span class="topic">Border-radius,Transforms (translateX/translateY),Layering with margin/positioning tricks.</span></td>
+                <td class="type"><span class="tag battle">CSS Battle</span></td>
+                <td class="links"><a href="https://cssbattle.dev/play/bzQ591FAfiRjAtqMae1E">Target</a>
+                    <a href="./pratice3.html">Solution</a>
+                    <a href="https://github.com/koushikreddy-p/CSS-Practice/blob/main/pratice3.html">Code</a>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="no">04</td>
+                <td class="name">Circular Ring Design <span class="topic">Border-radius,Transforms (translateX/translateY),Universal selector & ID selectors.</span></td>
+                <td class="type"><span class="tag battle">CSS Battle</span></td>
+                <td class="links"><a href="https://cssbattle.dev/play/roAyjEeXtmG1qITOSiXY">Target</a>
+                    <a href="./pratice2.html">Solution</a>
+                    <a href="https://github.com/koushikreddy-p/CSS-Practice/blob/main/pratice2.html">Code</a>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="no">05</td>
+                <td class="name">Item Card <span class="topic">Box model (width, height, padding, margin, borders, border-radius),Selectors (element selectors + an ID selector).</span></td>
+                <td class="type"><span class="tag classs">CLASS ROOM</span></td>
+                <td class="links"><a href="./images/product card.png">Target</a>
+                    <a href="./card1.html">Solution</a>
+                    <a href="https://github.com/koushikreddy-p/CSS-Practice/blob/main/card1.html">Code</a>
+                </td>
+            </tr>
+        </tbody>
     </table>
-    <br><br><br>
 
-    <p style="text-align: center; font-size: 15px; width: 80%; margin: auto;">
-        These challenges are based on the CSS topics we have completed in class,
-        helping me practice and strengthen my understanding through hands-on implementation.
-    </p>
+    <footer>
+        <span>Learning CSS under the guidance of Sunaina Ma'am.</span>
+        <span><a href="https://github.com/koushikreddy-p/CSS-Practice">All Sources on GitHub</a></span>
+    </footer>
     
 </body>
 </html>
