@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>11 Number</title>
+    <style>
+        .parent {
+            width: 500px;
+            height: 300px;
+            background-color: #3157B4;
+        }
+        #first-top {
+            width: 75px;
+            height: 30px;
+            background-color: #84BE8D;
+        }
+        #first-center {
+            width: 30px;
+            height: 150px;
+            background-color: #84BE8D;
+            transform: translateX(45px);
+        }
+        #first-bottom {
+            width: 120px;
+            height: 30px;
+            background-color: #84BE8D;
+        }
+        #first {
+            transform: translateX(100px) translateY(30px);
+        }
+        #second {
+            transform: translateX(250px) translateY(-180px);
+        }
+    </style>
+</head>
+<body>
+    <div class="parent">
+        <div id="first">
+            <div id="first-top"></div>
+            <div id="first-center"></div>
+            <div id="first-bottom"></div>
+        </div>
+        <div id="second">
+            <div id="first-top"></div>
+            <div id="first-center"></div>
+            <div id="first-bottom"></div>
+        </div>
+    </div>
+</body>
+</html>
