@@ -1,0 +1,182 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Position(CSS)</title>
+    <style>
+      * {
+        background-color: whitesmoke;
+        max-width: 88%;
+        font-size: 24px;
+        box-sizing: border-box;
+      }
+      h1 {
+        font-size: 75px;
+      }
+      h2 {
+        font-size: 60px;
+      }
+      .square1 {
+        background-color: orange;
+        width: 100px;
+        height: 100px;
+        border-radius: 24px;
+        /* transform: translate(-850px); */
+        position: static;
+      }
+      .square2 {
+        background-color: rgb(88, 167, 236);
+        width: 100px;
+        height: 100px;
+        border-radius: 24px;
+        /* transform: translate(-850px); */
+        position: sticky;
+        top: 100px;
+        left: 20px;
+      }
+      .square3 {
+        background-color: rgb(177, 236, 88);
+        width: 100px;
+        height: 100px;
+        border-radius: 24px;
+        /* transform: translate(-850px); */
+        position: relative;
+        top: 100px;
+        left: 20px;
+      }
+      .square4 {
+        background-color: rgb(236, 88, 93);
+        width: 100px;
+        height: 100px;
+        border-radius: 24px;
+        /* transform: translate(-850px); */
+        position: fixed;
+        right: 100px;
+        bottom: 100px;
+      }
+      .square5 {
+        background-color: rgb(186, 88, 236);
+        width: 100px;
+        height: 100px;
+        border-radius: 24px;
+        position: absolute;
+        top: 500px;
+        left: 200px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Positions in CSS</h1>
+    <br /><br />
+    <p>
+      The CSS position property controls how an element is placed in the
+      document. It works together with the offset properties top, right,
+      bottom, and left to determine exactly where an element ends up on the
+      page, and it accepts five possible values, each changing how the
+      browser calculates that element's placement.
+    </p><br>
+    <p>
+      Static is the default value for every element on a page, whether you
+      set it explicitly or not. An element left as static simply follows the
+      normal document flow, appearing exactly where it would naturally sit
+      in the HTML, one after another, top to bottom. The offset properties
+      have no effect on a static element at all.
+    </p><br>
+    <p>
+      Relative keeps an element in the normal document flow, but allows you
+      to shift it away from that natural spot using the offset properties.
+      The space it would have occupied stays reserved, so nothing else
+      shifts in to fill the gap it leaves behind.
+    </p><br>
+    <p>
+      Absolute takes an element out of the normal document flow entirely and
+      positions it relative to its nearest ancestor that isn't static. If no
+      such ancestor exists, it's positioned relative to the page itself, and
+      surrounding elements behave as though it isn't there.
+    </p><br>
+    <p>
+      Fixed also removes an element from the normal flow, but anchors it to
+      the browser viewport rather than to any ancestor element. A fixed
+      element stays locked in the same spot on screen even as the rest of
+      the page is scrolled.
+    </p><br>
+    <p>
+      Sticky is a hybrid of relative and fixed. An element with this value
+      behaves like a normal, relatively positioned element until the page is
+      scrolled to a defined offset, at which point it locks in place, and it
+      stays that way until its parent container scrolls out of view.
+    </p><br><br>
+    <div class="square1">
+    </div><br><br>
+    <h2>Static</h2>
+    <p>
+      This orange square is a good example of static positioning, since it's
+      simply left at the default value. It sits exactly where it falls in
+      the HTML, right after the paragraph above it, with no offsets applied.
+      Because static elements don't respond to top, right, bottom, or left,
+      and don't respond to z-index either, this value is best suited to the
+      majority of elements on a page that don't need any special placement,
+      leaving only a handful, like navigation bars or popups, to be switched
+      to one of the other four values.
+    </p><br><br>
+    <div class="square2">
+    </div><br><br>
+    <h2>Sticky</h2>
+    <p>
+      This blue square demonstrates sticky positioning, with a top offset of
+      100 pixels and a left offset of 20 pixels. As you scroll the page, it
+      behaves like a normal element right up until it would cross that top
+      offset, at which point it locks into place and stays fixed on screen
+      for as long as its parent container remains in view, only resuming
+      normal flow once that container scrolls away entirely. This makes
+      sticky positioning well suited to elements that should stay visible
+      for a limited stretch of scrolling, like a section heading, a table
+      header, or a short table of contents, without pinning them to the
+      screen permanently the way a fixed element would. It's a popular
+      choice for things like navigation bars that scroll normally until they
+      reach the top of the page, or alphabetical headings in a long list,
+      because it achieves that effect without any JavaScript at all.
+    </p><br><br>
+    <div class="square3">
+    </div><br><br>
+    <h2>Relative</h2>
+    <p>
+      This green square demonstrates relative positioning, with a top offset
+      of 100 pixels and a left offset of 20 pixels. It's nudged down and to
+      the right from the exact spot it would otherwise occupy in the normal
+      flow, but that original spot is still reserved, so nothing else on the
+      page shifts to fill it. Because a relatively positioned element stays
+      anchored to its own natural position rather than to some outer
+      container, it's most often used for small visual adjustments, like
+      lining up an icon with a line of text, or for establishing a
+      positioning context that absolutely positioned children can then be
+      placed against.
+    </p><br><br>
+    <div class="square4">
+    </div><br><br>
+    <h2>Fixed</h2>
+    <p>
+      This red square demonstrates fixed positioning, anchored 600 pixels
+      off the right edge and 200 pixels up from the bottom of the viewport.
+      Unlike the other squares on this page, it's been removed from the
+      normal document flow completely, so it doesn't scroll with the rest of
+      the content at all: it stays pinned to that same spot on screen no
+      matter how far up or down the page you scroll. This behavior makes
+      fixed positioning a common choice for elements that should always stay
+      visible, such as a persistent navigation bar, a floating action
+      button, or a chat widget that follows the user around the page.
+    </p><br><br>
+    <div class="square5">
+    </div><br><br>
+    <h2>Absolute</h2>
+    <p>
+      This purple square demonstrates absolute positioning, offset 50
+      pixels from the top and 20 pixels from the left of its nearest
+      positioned ancestor. It's removed from the normal document flow, so
+      it doesn't take up space or affect the layout around it, unlike
+      relative positioning.
+    </p><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    
+  </body>
+</html>
