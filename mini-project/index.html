@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Food Delhivery Application</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        background-color: #3B0A6B;
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
+
+      .card {
+        width: 400px;
+        height: 600px;
+        background-color: white;
+        border-radius: 16px;
+        color: rgb(29, 29, 29);
+        position: relative;
+        box-shadow: 10px 10px 40px rgba(255, 214, 10, 0.5)
+      }
+
+      .card:hover {
+        transform: translateY(-15px);
+        transition: 0.15s ease-in-out;
+      }
+
+      .photo {
+        width: 400px;
+        height: 320px;
+        border-radius: 16px 16px 0px 0px;
+        object-fit: cover;
+      }
+
+      .image span {
+        background-color: #FFD60A;
+        color: #1D1D1D;
+        padding: 4px;
+        border-radius: 15px;
+        font-weight: bolder;
+        position: absolute;
+        top: 15px;
+        left: 15px;
+      }
+
+      .info {
+        padding: 15px;
+      }
+      .info h1 {
+        font-size: 30px;
+        color: #073B3A;
+      }
+
+      .info p {
+        margin-top: 15px;
+        font-size: 18px;
+        color: rgb(66, 64, 64);
+        line-height: 25px;
+      }
+
+      .tech-stack {
+        margin-top: 15px;
+        display: flex;
+        justify-content: space-evenly;
+        font-size: large;
+      }
+
+      .tech-stack span {
+        background-color: #06D6A0;
+        color: #073B3A;
+        padding: 5px 10px;
+        border-radius: 16px;
+        font-weight: bold;
+      }
+
+      button {
+        margin-top: 20px;
+        width: 48%;
+        height: 50px;
+        border: none;
+        cursor: pointer;
+      }
+      .code-btn {
+        border-radius: 16px;
+        background-color: #EF476F;
+        color: white;
+        font-size: large;
+        font-weight: bold;
+      }
+
+      .live-btn {
+        border-radius: 16px;
+        background-image: linear-gradient(to right, #118AB2, #06D6A0);
+        font-size: large;
+        font-weight: bold;
+      }
+    </style>
+  </head>
+  <body>
+    <section class="card">
+      <div class="image">
+        <img
+          src="https://images.pexels.com/photos/9609860/pexels-photo-9609860.jpeg"
+          alt="food_img"
+          class="photo"
+        />
+        <span>01</span>
+      </div>
+
+      <div class="info">
+        <h1>Food Delhivery Application</h1>
+        <p>
+          A comprehensive food delhivery application platform built using java,
+          springboot, Mysql and react
+        </p>
+        <div class="tech-stack">
+          <span>Java</span>
+          <span>Springboot</span>
+          <span>React</span>
+          <span>MySQL</span>
+        </div>
+        <div class="buttons">
+          <button class="code-btn">Code</button>
+          <button class="live-btn">Live Demo</button>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
